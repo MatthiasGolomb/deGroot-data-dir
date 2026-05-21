@@ -1,0 +1,23 @@
+# @package filter.final
+# ARM64 filter — excludes PyRosetta-dependent and DSSP-dependent metrics.
+# external_plddt relaxed 0.87 -> 0.86 on 2026-05-14 (Run 4 onwards).
+# Rationale: Run 3 near-misses failed only on pLDDT by 0.0006-0.009 with
+# otherwise strong metrics; 0.87 was set conservatively before real data existed.
+clashes:
+  value: 1
+  operator: '<'
+pdockq2:
+  value: 0.23
+  operator: '>'
+external_plddt:
+  value: 0.86
+  operator: '>'
+external_iptm:
+  value: 0.74
+  operator: '>'
+external_ptm:
+  value: 0.84
+  operator: '>'
+external_pae:
+  value: 7.5
+  operator: '<'

@@ -1,0 +1,5 @@
+# @package filter.initial
+# ARM64 initial filter — clash check only.
+clashes:
+  value: 1
+  operator: '<'
